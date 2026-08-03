@@ -451,6 +451,29 @@ a:focus-visible{outline:1px solid var(--orange);outline-offset:6px}
 @media(max-width:600px){.whatsapp-widget{right:max(14px,env(safe-area-inset-right));bottom:max(14px,env(safe-area-inset-bottom));width:48px;height:48px;min-height:48px}.whatsapp-widget[data-footer-visible]{--widget-lift:-112px}.whatsapp-widget svg{width:24px;height:24px}}
 @media(prefers-reduced-motion:reduce){.whatsapp-widget{transition:none}}
 
+/* Awwwards-inspired signal loader: morphing lenses, re-authored for Basit's identity. */
+html[data-page-loading]{overflow:hidden}
+.page-loader{--loader-paper:#eae5dc;--loader-ink:#16171a;--loader-accent:#ff5f4a;--loader-on-accent:#17120f;position:fixed;inset:0;z-index:10000;min-height:100dvh;display:grid;place-items:center;background:var(--loader-paper);color:var(--loader-ink);overflow:hidden;opacity:1;transition:opacity 180ms var(--ease-out);animation:page-loader-failsafe 0s 3s forwards}
+html[data-theme="dark"] .page-loader{--loader-paper:#151619;--loader-ink:#f3f1ea;--loader-accent:#ff735f;--loader-on-accent:#151619}
+.page-loader[data-state="leaving"]{opacity:0;pointer-events:none}
+.page-loader-stage{position:relative;width:min(84vw,520px);height:210px;display:grid;place-items:center;isolation:isolate}
+.page-loader-lenses{position:absolute;inset:0;display:grid;place-items:center;filter:saturate(1.04)}
+.page-loader-lenses i{--x-start:0px;--x-open:0px;--x-rest:0px;position:absolute;width:112px;height:132px;border-radius:50%;background:var(--loader-accent);opacity:0;transform-origin:center;animation:page-loader-lens 1800ms var(--ease-in-out) both}
+.page-loader-lenses i:nth-child(1){--x-start:-126px;--x-open:-92px;--x-rest:-58px;animation-delay:0ms}
+.page-loader-lenses i:nth-child(2){--x-start:-64px;--x-open:-48px;--x-rest:-29px;animation-delay:35ms}
+.page-loader-lenses i:nth-child(3){--x-start:0px;--x-open:0px;--x-rest:0px;animation-delay:70ms}
+.page-loader-lenses i:nth-child(4){--x-start:64px;--x-open:48px;--x-rest:29px;animation-delay:105ms}
+.page-loader-lenses i:nth-child(5){--x-start:126px;--x-open:92px;--x-rest:58px;animation-delay:140ms}
+.page-loader-copy{position:relative;z-index:2;margin:0;color:var(--loader-on-accent);text-align:center;opacity:0;filter:blur(3px);transform:translate3d(0,7px,0);animation:page-loader-copy 1800ms var(--ease-out) both}
+.page-loader-copy strong,.page-loader-copy small{display:block}
+.page-loader-copy strong{font-size:18px;font-weight:800;line-height:1;letter-spacing:-.02em}
+.page-loader-copy small{margin-top:9px;font-size:8px;font-weight:700;line-height:1;letter-spacing:.13em}
+@keyframes page-loader-lens{0%{opacity:0;transform:translate3d(var(--x-start),0,0) scaleX(.38)}14%{opacity:1}30%{opacity:1;transform:translate3d(var(--x-open),0,0) scaleX(1.04)}52%{opacity:1;transform:translate3d(var(--x-rest),0,0) scaleX(.42)}74%{opacity:1;transform:translate3d(var(--x-open),0,0) scaleX(.78)}100%{opacity:.96;transform:translate3d(var(--x-rest),0,0) scaleX(.46)}}
+@keyframes page-loader-copy{0%,34%{opacity:0;filter:blur(3px);transform:translate3d(0,7px,0)}48%,86%{opacity:1;filter:blur(0);transform:translate3d(0,0,0)}100%{opacity:0;filter:blur(2px);transform:translate3d(0,-4px,0)}}
+@keyframes page-loader-failsafe{to{visibility:hidden;pointer-events:none}}
+@media(max-width:600px){.page-loader-stage{width:100vw;height:180px;transform:scale(.78)}.page-loader-copy strong{font-size:17px}.page-loader-copy small{font-size:7px}}
+@media(prefers-reduced-motion:reduce){.page-loader{animation:none;transition:opacity 160ms var(--ease-out)}.page-loader-lenses i{animation:none;opacity:.96;transform:translate3d(var(--x-rest),0,0) scaleX(.46)}.page-loader-copy{animation:none;opacity:1;filter:none;transform:none}}
+
 /* Homepage shipping polish: stable reading, precise feedback, and a tighter mobile opening. */
 .gallery-page{overflow:clip}
 .gallery-header{position:sticky;top:0;background:var(--g-paper);backdrop-filter:blur(0);-webkit-backdrop-filter:blur(0);transition:background-color 180ms var(--ease-out),backdrop-filter 180ms var(--ease-out),-webkit-backdrop-filter 180ms var(--ease-out)}

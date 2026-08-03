@@ -100,6 +100,7 @@ The project can be deployed to Vercel directly or connected to a GitHub reposito
 - Email: [ba876943@gmail.com](mailto:ba876943@gmail.com)
 - GitHub: [Basit1478](https://github.com/Basit1478)
 - LinkedIn: [Basit Ali](https://www.linkedin.com/in/basit-ali-baloch-738285253/)
+- Instagram: [@basit_ali_official_2005](https://www.instagram.com/basit_ali_official_2005/)
 - WhatsApp: [+92 370 3168969](https://wa.me/923703168969)
 
 ---

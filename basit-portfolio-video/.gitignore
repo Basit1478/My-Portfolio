@@ -1,0 +1,11 @@
+node_modules/
+dist/
+build/
+out/
+.remotion*/
+.npm-cache*/
+*.log
+.DS_Store
+.env
+
+# Rendered exports stay local. Imported source media in public/ remains tracked.
