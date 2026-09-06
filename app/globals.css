@@ -642,7 +642,7 @@ html[data-theme="dark"] .gallery-portrait-frame{box-shadow:18px 30px 64px rgba(0
 .gallery-site-row .gallery-project-copy>span,.gallery-site-row .gallery-project-copy p{color:var(--g-muted)}
 .gallery-site-row .gallery-project-copy p{font-size:14px;letter-spacing:.02em}
 .gallery-site-row .gallery-project-copy a:first-child{color:var(--g-coral)}
-.gallery-site-row .gallery-project-capture{height:clamp(330px,36vw,540px);border:1px solid var(--g-rule)}
+.gallery-site-row .gallery-project-capture{height:auto;aspect-ratio:16/10;border:1px solid var(--g-rule)}
 .gallery-site-row:nth-child(even) .gallery-project-copy{grid-column:2;grid-row:1}
 .gallery-site-row:nth-child(even) .gallery-project-art{grid-column:1;grid-row:1}
 

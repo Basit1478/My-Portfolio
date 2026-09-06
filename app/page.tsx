@@ -18,6 +18,9 @@ const Arrow = () => (
 );
 
 const liveBuilds = [
+  { title: "Veyra", type: "Editorial e-commerce experience", url: "https://veyra-ecommerce-store.vercel.app/", image: "/projects/veyra-ecommerce.png", alt: "Veyra e-commerce opening screen in deep green with an Azadi Edition presentation" },
+  { title: "Velora", type: "Immersive restaurant experience", url: "https://velora-restaurent.vercel.app/", image: "/projects/velora-restaurant-branded.png", alt: "Velora restaurant wordmark across a dark atmospheric opening screen" },
+  { title: "Morrow Dental", type: "Calm, editorial dental practice website", url: "https://morrow-dental.vercel.app/", image: "/projects/morrow-dental.png", alt: "Morrow Dental opening screen with an illustrated dental motif" },
   { title: "Acmeem", type: "Event management & business consulting", url: "https://acmeem.vercel.app", image: "/projects/acmeem.png", alt: "Acmeem projects page for industry conferences and events" },
   { title: "Blazon 360", type: "Independent marketing agency build", url: "https://blazon360.vercel.app", image: "/projects/blazon360.png", alt: "Blazon 360 agency website loading screen and brand mark" },
   { title: "Ali Rent a Car", type: "Car rental website · Karachi", url: "https://ali-rent-a-car.vercel.app", image: "/projects/ali-rent-a-car.png", alt: "Ali Rent a Car homepage featuring its vehicle booking experience" },
@@ -98,12 +101,12 @@ export default function Page() {
             <div className="gallery-portrait-caption"><span>AI / CODE / DESIGN</span><span>KARACHI · PK</span></div>
           </div>
         </div>
-        <div className="gallery-statement" data-gallery-intro><span>AI ENGINEER / FULL-STACK DEVELOPER</span><p>I make complex technology feel <em>clear, useful,</em> and worth caring about.</p><div className="gallery-hero-actions"><a href="#live">Explore live projects <Arrow /></a><a href="mailto:ba876943@gmail.com">Start a conversation</a></div></div>
+        <div className="gallery-statement" data-gallery-intro><span>AI ENGINEER / FULL-STACK DEVELOPER</span><p>I make complex technology feel <em>clear, useful,</em> and worth caring about.</p><div className="gallery-hero-actions"><a href="#live">Explore live projects <Arrow /></a><a href="/resume.pdf" target="_blank" rel="noreferrer">View CV <Arrow /></a><a href="mailto:ba876943@gmail.com">Start a conversation</a></div></div>
         <div className="gallery-hero-meta" data-gallery-intro><span>KARACHI, PAKISTAN</span><span>AVAILABLE FOR SELECT PROJECTS</span></div>
       </section>
 
       <section id="live" className="gallery-live">
-        <div className="gallery-live-intro" data-gallery-reveal><h2>Live work,<br /><em>shown as built.</em></h2><p>Twenty working websites across business, product thinking, utilities and interactive games. Every project is paired with a direct capture of its deployed interface.</p></div>
+        <div className="gallery-live-intro" data-gallery-reveal><h2>Live work,<br /><em>shown as built.</em></h2><p>Twenty-three working websites across commerce, hospitality, healthcare, business, product thinking, utilities and interactive games. Every project is paired with a direct capture of its deployed interface.</p></div>
         <div className="gallery-site-ledger">
           {liveProjects.map((project, index) => <article className="gallery-project gallery-site-row" key={project.url} data-gallery-reveal>
             <div className="gallery-project-copy"><span>{String(index + 1).padStart(2, "0")} / LIVE DEPLOYMENT</span><h3>{project.title}</h3><p>{project.type}</p><div><a href={project.url} target="_blank" rel="noreferrer">Open website <Arrow /></a>{"source" in project && project.source && <a href={project.source} target="_blank" rel="noreferrer">View code <Arrow /></a>}</div></div>
@@ -117,7 +120,7 @@ export default function Page() {
         <div className="gallery-approach-steps"><article data-gallery-reveal><b>01</b><h3>Find the tension</h3><p>Understand the human problem, the technical constraint and the uncomfortable edge case.</p></article><article data-gallery-reveal><b>02</b><h3>Give it shape</h3><p>Turn invisible decisions into a system people can see, test and discuss.</p></article><article data-gallery-reveal><b>03</b><h3>Make it hold</h3><p>Build the product surface, model behavior, data flow and infrastructure as one whole.</p></article></div>
       </section>
 
-      <section id="about" className="gallery-about"><div data-gallery-reveal><h2>Engineer by practice.<br /><em>Designer by instinct.</em></h2><p className="gallery-section-meta">About Basit</p></div><div data-gallery-reveal><p>I’m based in Karachi and building Codizzz and AgentHubPK while developing agentic AI systems through GIAIC. I care about the invisible details that make intelligent software understandable.</p><div className="gallery-about-links"><a href="/experience">Experience <Arrow /></a><a href="/resume.pdf">Resume <Arrow /></a></div></div></section>
+      <section id="about" className="gallery-about"><div data-gallery-reveal><h2>Engineer by practice.<br /><em>Designer by instinct.</em></h2><p className="gallery-section-meta">About Basit</p></div><div data-gallery-reveal><p>I’m based in Karachi and building Codizzz and AgentHubPK while developing agentic AI systems through GIAIC. I care about the invisible details that make intelligent software understandable.</p><div className="gallery-about-links"><a href="/experience">Experience <Arrow /></a><a href="/resume.pdf" target="_blank" rel="noreferrer">View CV <Arrow /></a></div></div></section>
 
       <section id="contact" className="gallery-contact"><div data-gallery-reveal><h2>Bring the hard part.<br /><em>I’ll bring attention.</em></h2><p className="gallery-contact-note">Let’s make something useful.</p><div className="gallery-contact-actions"><a className="gallery-contact-email" href="mailto:ba876943@gmail.com">ba876943@gmail.com <Arrow /></a><CopyEmailButton email="ba876943@gmail.com" /></div></div><footer><span>BASIT ALI © 2026</span><span>KARACHI / PAKISTAN</span><a href="https://github.com/Basit1478" target="_blank" rel="noreferrer">GitHub <Arrow /></a><a href="https://www.linkedin.com/in/basit-ali-baloch-738285253/" target="_blank" rel="noreferrer">LinkedIn <Arrow /></a></footer></section>
     </main>
